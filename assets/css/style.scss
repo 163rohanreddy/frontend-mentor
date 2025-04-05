@@ -1,0 +1,201 @@
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$Grey-500: hsl(234, 12%, 34%);
+$Grey-400: hsl(212, 6%, 44%);
+$White: hsl(0, 0%, 100%);
+
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url(../fonts/Poppins/static/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../fonts/Poppins/static/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../fonts/Poppins/static/Poppins-SemiBold.ttf);
+}
+
+@mixin text-preset-1{
+    font-family: "Poppins-SemiBold";
+    font-size: 36px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-preset-2{
+    font-family: "Poppins-ExtraLight";
+    font-size: 36px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-preset-3{
+    font-family: "Poppins-SemiBold";
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: 0;
+}
+
+@mixin text-preset-4{
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0;
+}
+
+@mixin text-preset-5{
+    font-family: "Poppins-Regular";
+    font-size: 13px;
+    line-height: 160%;
+    letter-spacing: 0;
+}
+
+@mixin text-preset-1-mobile{
+    font-family: "Poppins-SemiBold";
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+}
+
+@mixin text-preset-2-mobile{
+    font-family: "Poppins-ExtraLight";
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: $White;
+    min-height: 100vh;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 767px) {
+        padding: 3.5rem 2rem;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1439px) {
+        padding: 5rem 0;
+    }
+    @media only screen and (min-width: 1440px) {
+        padding: 102px 0;
+    }
+    header {
+        text-align: center;
+        @media only screen and (max-width: 767px) {
+            .title-1 {
+                @include text-preset-2-mobile();
+                color: $Grey-500;
+            }
+            .title-2 {
+                @include text-preset-1-mobile();
+                color: $Grey-500;
+                margin-bottom: 1rem
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            width: 540px;
+            .title-1 {
+                @include text-preset-2();
+                color: $Grey-500;
+            }
+            .title-2 {
+                @include text-preset-1();
+                color: $Grey-500;
+                margin-bottom: 1rem
+            }
+        }
+        .description {
+            @include text-preset-4();
+            color: $Grey-500;
+        }
+    }
+    .cards {
+        display: grid;
+        @media only screen and (max-width: 767px) {
+            margin-top: 60px;
+        }
+        @media only screen and (min-width: 768px) {
+            margin-top: 74px;
+        }
+        @media only screen and (max-width: 767px) {
+            grid-template-columns: auto;
+            row-gap: 2rem;
+            .card-sub-grid {
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 2rem;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {
+            grid-template-columns: auto;
+            row-gap: 2rem;
+            justify-items: center;
+            .card-sub-grid {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 2rem;
+            }
+        }
+        @media only screen and (min-width: 1440px) {
+            grid-template-columns: auto auto auto;
+            column-gap: 2rem;
+            align-items: center;
+            .card-sub-grid {
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 2rem;
+            }
+        }
+        .supervisor-class {
+            border-top: 4px solid $Cyan;
+        }
+        .team-builder-class {
+            border-top: 4px solid $Red;
+        }
+        .karma-class {
+            border-top: 4px solid $Orange;
+        }
+        .calculator-class {
+            border-top: 4px solid $Blue;
+        }
+        .card-feature {
+            width: 314px;
+            height: 250px;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            .feature-title {
+                @include text-preset-3();
+                color: $Grey-500;
+                padding-bottom: 6px;
+            }
+            .feature-description {
+                @include text-preset-5();
+                color: $Grey-400;
+                margin-bottom: 2rem;
+            }
+            .feature-icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                margin-top: 2rem;
+                img {
+                    width: 4rem;
+                }
+            }
+        }
+    }
+}
