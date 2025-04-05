@@ -73,6 +73,7 @@ body {
 .product-container {
     background-color: $White;
     display: flex;
+    border-radius: 0.5rem;
     @media only screen and (max-width: 767px) {
       flex-direction: column;
       width: calc(100% - 13px);
@@ -83,7 +84,6 @@ body {
       width: 37.5rem;
       height: 28rem;
     }
-    border-radius: 0.5rem;
     .product-image {
       @media only screen and (max-width: 767px) {
         content: url(../images/image-product-mobile.jpg);
