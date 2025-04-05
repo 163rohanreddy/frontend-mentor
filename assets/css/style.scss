@@ -1,0 +1,162 @@
+$VeryDarkBlue: hsl(212, 21%, 14%);
+$DarkGrayishBlue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+$DarkCyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$DarkGreen: hsl(158, 42%, 18%);
+
+@font-face {
+  font-family: "Fraunces-Bold";
+  src: url(../fonts/Fraunces/static/Fraunces_9pt-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+@mixin text-preset-1 {
+  font-family: "Fraunces-Bold";
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: "Montserrat-Bold";
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: "Montserrat-Medium";
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: "Montserrat-Medium";
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 5px;
+}
+
+@mixin text-preset-5 {
+  font-family: "Montserrat-Medium";
+  font-size: 13px;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $Cream;
+}
+
+@media only screen and (max-width: 767px) {
+ 
+}
+@media only screen and (min-width: 768px) {
+
+}
+
+.product-container {
+    background-color: $White;
+    display: flex;
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+      width: calc(100% - 13px);
+      margin: 0 13px;
+    }
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      width: 37.5rem;
+      height: 28rem;
+    }
+    border-radius: 0.5rem;
+    .product-image {
+      @media only screen and (max-width: 767px) {
+        content: url(../images/image-product-mobile.jpg);
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      @media only screen and (min-width: 768px) {
+        content: url(../images/image-product-desktop.jpg);
+        border-radius: 0.5rem 0 0 0.5rem;
+        width: 50%;
+      }
+    }
+    .product-description {
+      padding: 2rem;
+    
+      .product-category {
+        color: $DarkGrayishBlue;
+        @include text-preset-4();
+        padding-bottom: 1.5rem;
+        text-transform: uppercase;
+      }
+      .product-title {
+        color: $VeryDarkBlue;
+        @include text-preset-1();
+        padding-bottom: 1.5rem;
+      }
+      .product-info {
+        color: $DarkGrayishBlue;
+        @include text-preset-3();
+        padding-bottom: 1.5rem;
+      }
+      .product-price-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        .product-discount-price {
+          color: $DarkCyan;
+          @include text-preset-1();
+          padding-right: 0.5rem;
+        }
+        .product-original-price {
+          color: $DarkGrayishBlue;
+          @include text-preset-5();
+        }
+      }
+      .cart-button {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $DarkCyan;
+        border: none;
+        @include text-preset-2();
+        color: $White;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        img {
+          padding-right: 0.5rem;
+        }
+      }
+
+      .cart-button:hover,.cart-button:focus {
+        cursor: pointer;
+        background-color: $DarkGreen;
+      }
+    }
+}
