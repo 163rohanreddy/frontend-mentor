@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "BarlowSemiCondensed-Medium";
+  src: url(../fonts/Barlow_Semi_Condensed/static/BarlowSemiCondensed-Medium.ttf);
+}
+@font-face {
+  font-family: "BarlowSemiCondensed-SemiBold";
+  src: url(../fonts/Barlow_Semi_Condensed/static/BarlowSemiCondensed-SemiBold.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F5F6;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 73px 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  body {
+    padding: 83px 60px;
+  }
+}
+body .testimonials-grid-container {
+  display: grid;
+  gap: 2rem;
+}
+@media only screen and (max-width: 767px) {
+  body .testimonials-grid-container {
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  body .testimonials-grid-container {
+    grid-template-columns: auto auto;
+  }
+  body .testimonials-grid-container .grid-1 {
+    grid-column: span 2;
+  }
+  body .testimonials-grid-container .grid-2 {
+    grid-column: span 1;
+  }
+  body .testimonials-grid-container .grid-3 {
+    grid-column: span 1;
+  }
+  body .testimonials-grid-container .grid-4 {
+    grid-column: span 2;
+  }
+  body .testimonials-grid-container .grid-5 {
+    grid-column: span 2;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .testimonials-grid-container {
+    grid-template-columns: repeat(4, 255px);
+  }
+  body .testimonials-grid-container .grid-1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  body .testimonials-grid-container .grid-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  body .testimonials-grid-container .grid-3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  body .testimonials-grid-container .grid-4 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  body .testimonials-grid-container .grid-5 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+}
+body .testimonials-grid-container .grid-1 {
+  background-color: hsl(263, 55%, 52%);
+}
+body .testimonials-grid-container .grid-1 .profile .user-name,
+body .testimonials-grid-container .grid-1 .user-testimonial-1 {
+  color: hsl(0, 0%, 100%);
+}
+body .testimonials-grid-container .grid-1 .profile .user-position,
+body .testimonials-grid-container .grid-1 .user-testimonial-2 {
+  color: hsl(260, 100%, 95%);
+}
+body .testimonials-grid-container .grid-2 {
+  background-color: hsl(217, 19%, 35%);
+}
+body .testimonials-grid-container .grid-2 .profile .user-name,
+body .testimonials-grid-container .grid-2 .user-testimonial-1 {
+  color: hsl(0, 0%, 100%);
+}
+body .testimonials-grid-container .grid-2 .profile .user-position {
+  color: hsl(215, 10%, 67%);
+}
+body .testimonials-grid-container .grid-2 .user-testimonial-2 {
+  color: hsl(214, 17%, 92%);
+}
+body .testimonials-grid-container .grid-3 {
+  background-color: hsl(0, 0%, 100%);
+}
+body .testimonials-grid-container .grid-3 .profile .user-name,
+body .testimonials-grid-container .grid-3 .user-testimonial-1 {
+  color: hsl(217, 19%, 35%);
+}
+body .testimonials-grid-container .grid-3 .profile .user-position,
+body .testimonials-grid-container .grid-3 .user-testimonial-2 {
+  color: hsl(224, 10%, 45%);
+}
+body .testimonials-grid-container .grid-4 {
+  background-color: hsl(219, 29%, 14%);
+}
+body .testimonials-grid-container .grid-4 .profile {
+  color: hsl(0, 0%, 100%);
+}
+body .testimonials-grid-container .grid-4 .user-testimonial-1 {
+  color: hsl(0, 0%, 81%);
+}
+body .testimonials-grid-container .grid-4 .user-testimonial-2 {
+  color: hsl(214, 17%, 92%);
+}
+body .testimonials-grid-container .grid-5 {
+  background-color: hsl(0, 0%, 100%);
+}
+body .testimonials-grid-container .grid-5 .profile .user-name,
+body .testimonials-grid-container .grid-5 .user-testimonial-1 {
+  color: hsl(217, 19%, 35%);
+}
+body .testimonials-grid-container .grid-5 .profile .user-position {
+  color: hsl(215, 10%, 67%);
+}
+body .testimonials-grid-container .grid-5 .user-testimonial-2 {
+  color: hsl(224, 10%, 45%);
+}
+body .testimonials-grid-container .testimonials-grid {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+body .testimonials-grid-container .testimonials-grid .profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .testimonials-grid-container .testimonials-grid .profile .image-border-1 {
+  border: 2px solid hsl(264, 82%, 80%);
+}
+body .testimonials-grid-container .testimonials-grid .profile .image-border-2 {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+body .testimonials-grid-container .testimonials-grid .profile .avatar {
+  border-radius: 50%;
+  width: 28px;
+  margin-right: 17px;
+}
+body .testimonials-grid-container .testimonials-grid .profile .user-container .user-name {
+  font-family: "BarlowSemiCondensed-Medium";
+  font-size: 13px;
+  line-height: 110%;
+  letter-spacing: 0;
+  padding-bottom: 4px;
+}
+body .testimonials-grid-container .testimonials-grid .profile .user-container .user-position {
+  font-family: "BarlowSemiCondensed-Medium";
+  font-size: 11px;
+  line-height: 110%;
+  letter-spacing: 0;
+}
+body .testimonials-grid-container .testimonials-grid .user-testimonial-1 {
+  font-family: "BarlowSemiCondensed-SemiBold";
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+body .testimonials-grid-container .testimonials-grid .user-testimonial-2 {
+  font-family: "BarlowSemiCondensed-Medium";
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
