@@ -132,7 +132,17 @@ body {
         }
 
         .grid-1 {
-            background-color: $Purple-500;
+            @media only screen and (min-width: 768px) {
+                background-color: $Purple-500;
+                background-image: url(../images/bg-pattern-quotation.svg);
+                background-repeat: no-repeat;
+                background-position: calc(100% - 60px) 0;
+                background-size: auto;
+            }
+
+            @media only screen and (max-width: 767px) {
+                background-color: $Purple-500;
+            }
 
             .profile .user-name,
             .user-testimonial-1 {
