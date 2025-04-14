@@ -458,4 +458,32 @@ body .meet-page-footer .page-section-footer {
   color: #8FE3F9;
 }
 
+.Purple-Button:hover, .Purple-Button:active, .Purple-Button:focus {
+  padding: 16px 40px;
+  border-radius: 29px;
+  background-color: #B18BDD;
+  border: none;
+  font-family: "Red-Hat-Display-Black";
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #FAFAFA;
+  cursor: pointer;
+}
+
+.Cyan-Button:hover,
+.Cyan-Button:active,
+.Cyan-Button:focus {
+  padding: 16px 40px;
+  border-radius: 29px;
+  background-color: #71C0D4;
+  border: none;
+  font-family: "Red-Hat-Display-Black";
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #FAFAFA;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */

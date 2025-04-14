@@ -438,3 +438,15 @@ body {
     padding-left: 4px;
     @include Text-Preset-5(variables.$Cyan-300)
 }
+
+.Purple-Button:hover, .Purple-Button:active, .Purple-Button:focus {
+    @include Button(#B18BDD);
+    cursor: pointer;
+}
+
+.Cyan-Button:hover,
+.Cyan-Button:active,
+.Cyan-Button:focus {
+    @include Button(#71C0D4);
+    cursor: pointer;
+}
