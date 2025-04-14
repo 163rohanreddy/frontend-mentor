@@ -33,7 +33,7 @@ body .meet-page-nav img {
   height: 28px;
 }
 body .meet-page-header {
-  padding-top: 4rem;
+  margin-top: 4rem;
   display: flex;
 }
 @media only screen and (max-width: 767px) {
@@ -86,6 +86,8 @@ body .meet-page-header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 4rem;
+    height: 22.5rem;
   }
   body .meet-page-header .page-section-header {
     width: 28rem;
@@ -94,6 +96,9 @@ body .meet-page-header {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  }
+  body .meet-page-header .page-hero-img-right {
+    object-fit: none;
   }
 }
 body .meet-page-header .button-section {

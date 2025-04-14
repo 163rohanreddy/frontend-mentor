@@ -131,7 +131,7 @@ body {
     }
 
     .meet-page-header {
-        padding-top: 4rem;
+        margin-top: 4rem;
         display: flex;
 
         @media only screen and (max-width: 767px) {
@@ -193,6 +193,8 @@ body {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
+            margin-bottom: 4rem;
+            height: 22.5rem;
 
             .page-section-header {
                 width: 28rem;
@@ -201,6 +203,10 @@ body {
                 justify-content: center;
                 align-items: center;
                 gap: 2rem;
+            }
+
+            .page-hero-img-right {
+                object-fit: none;
             }
         }
 
