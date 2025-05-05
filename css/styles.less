@@ -1,0 +1,248 @@
+@Gray-900: hsl(217, 19%, 35%);
+@Gray-500: hsl(214, 17%, 51%);
+@Gray-400: hsl(212, 23%, 69%);
+@Gray-200: hsl(210, 46%, 95%);
+@White: hsl(0, 0%, 100%);
+
+@font-face {
+    font-family: "Manrope-Regular";
+    src: url(../fonts/Manrope/static/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Manrope-Bold";
+    src: url(../fonts/Manrope/static/Manrope-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Manrope-Medium";
+    src: url(../fonts/Manrope/static/Manrope-Medium.ttf);
+}
+
+.Text-Preset-1-Bold {
+    font-family: "Manrope-Bold";
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.25px;
+    color: @Gray-900;
+}
+
+.Text-Preset-2-Medium(@color) {
+    font-family: "Manrope-Medium";
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.0012em;
+    color: @color;
+
+}
+
+.Text-Preset-2-Bold {
+    font-family: "Manrope-Bold";
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.0012em;
+    color: @Gray-900;
+}
+
+.Text-Preset-3 {
+    font-family: "Manrope-Regular";
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.25em;
+    color: @Gray-400;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: @Gray-200;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .article-container {
+        background-color: @White;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        border-radius: 10px;
+        width: 100%;
+
+        @media screen {
+            flex-direction: row;
+            width: 730px;
+
+            .article-image {
+                width: 285px;
+                height: 280px;
+                border-radius: 10px 0 0 10px;
+            }
+
+            @media (max-width: 1439px) {
+                flex-direction: row;
+                width: 608px;
+
+                .article-image {
+                    width: 229px;
+                    height: 346px;
+                    border-radius: 10px 0 0 10px;
+                }
+            }
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                margin: 4rem 1.5rem;
+
+                .article-image {
+                    width: 100%;
+                    max-height: 200px;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+
+        .article-info-container {
+            @media screen {
+                padding: 30px 40px;
+
+                @media (max-width: 1439px) {
+                    padding: 41px 2rem;
+                }
+
+                @media (max-width: 767px) {
+                    padding: 2rem 30px 0;
+                }
+            }
+
+            .article-heading {
+                .Text-Preset-1-Bold();
+            }
+
+            .article-decription {
+                .Text-Preset-2-Medium(@Gray-500);
+                margin: 1.5rem 0;
+            }
+
+            .author-info-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                @media screen and (max-width:767px) {
+                    padding: 1.5rem 0 18px;
+                }
+
+                .author-info {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+
+                    p {
+                        .Text-Preset-2-Medium(@Gray-400);
+                    }
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.share-button {
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: @Gray-200;
+
+    &:hover,
+    &:focus {
+        img:first-child {
+            content: url("../images/icon-active-share.svg");
+        }
+    }
+}
+
+
+.active-state-btn {
+    background-color: @Gray-500 !important;
+    fill: @White !important;
+
+}
+
+.share-info-container {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: @Gray-900;
+    padding: 22px 30px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 6px;
+}
+
+.share-options {
+    display: flex;
+    flex-direction: row;
+
+    p {
+        .Text-Preset-3();
+        text-transform: uppercase;
+        padding-right: 1.5rem;
+    }
+
+    img {
+        padding-right: 1rem;
+    }
+
+    img:last-child {
+        padding-right: 0;
+    }
+}
+
+/* Popup container */
+.share-popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.share-popup .share-popup-container {
+    visibility: hidden;
+    background-color: @Gray-900;
+    border-radius: 10px;
+    padding: 18px 38px;
+    position: absolute;
+    z-index: 1;
+    bottom: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Popup arrow */
+.share-popup .share-popup-container::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: @Gray-900 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.share-popup.show .share-popup-container {
+    visibility: visible !important;
+}

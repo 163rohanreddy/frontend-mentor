@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet/less" type="text/css" href="./css/styles.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="script.js" defer></script>
+
+    <title>Article preview component</title>
+  </head>
+  <body onresize="onScreenResize()">
+    <section class="article-container">
+      <img src="./images/drawers.jpg" alt="drawers" class="article-image" />
+      <section class="article-info-container">
+        <header>
+          <h1 class="article-heading">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+        </header>
+        <main>
+          <p class="article-decription">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </main>
+        <footer>
+          <section class="author-info-container" id="author-info-id">
+            <section class="author-info">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="avatar-michelle"
+                width="40px"
+                height="40px"
+              />
+              <section>
+                <h5 class="Text-Preset-2-Bold">Michelle Appleton</h5>
+                <p>28 Jun 2020</p>
+              </section>
+            </section>
+            <button
+              id="share-button-id"
+              class="share-button share-popup"
+              onclick="onShare()"
+            >
+              <img src="./images/icon-share.svg" alt="icon-share" />
+              <span class="share-popup-container">
+                <section class="share-options">
+                  <p>Share</p>
+                  <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+                  <img src="./images/icon-twitter.svg" alt="icon-twitter" />
+                  <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+                </section>
+              </span>
+            </button>
+          </section>
+        </footer>
+      </section>
+      <section class="share-info-container" id="share-options-mobile-id">
+        <section class="share-options">
+          <p>Share</p>
+          <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+          <img src="./images/icon-twitter.svg" alt="icon-twitter" />
+          <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+        </section>
+        <button class="share-button active-state-btn" onclick="onShareBack()">
+          <img src="./images/icon-active-share.svg" alt="icon-share" />
+        </button>
+      </section>
+    </section>
+  </body>
+</html>
