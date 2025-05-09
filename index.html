@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./script.js"></script>
+
+    <title>Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <section class="newsletter-container">
+      <!-- Sign-up form start -->
+      <section class="sign-up-container" id="sign-up-container-id">
+        <picture>
+          <source
+            media="(min-width:1440px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="./assets/images/illustration-sign-up-tablet.svg"
+          />
+          <img
+            class="illustration-sign-up-image"
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="illustration-sign-up"
+          />
+        </picture>
+        <section class="sign-up-info-container">
+          <header class="sign-up-info-header">
+            <h1>Stay updated!</h1>
+          </header>
+          <main class="sign-up-info-main">
+            <p class="newsletter-info-description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="newsletter-info-list">
+              <li>
+                <img src="./assets/images/icon-list.svg" alt="icon-list" />
+                <p>Product discovery and building what matters</p>
+              </li>
+              <li>
+                <img src="./assets/images/icon-list.svg" alt="icon-list" />
+                <p>Measuring to ensure updates are a success</p>
+              </li>
+              <li>
+                <img src="./assets/images/icon-list.svg" alt="icon-list" />
+                <p>And much more!</p>
+              </li>
+            </ul>
+            <form autocomplete="on">
+              <section class="label-and-error-section">
+                <label for="email-input-id" class="email-label"
+                  >Email address</label
+                >
+                <p id="error-message-id" class="error-message">
+                  Valid email required
+                </p>
+              </section>
+              <input
+                id="email-input-id"
+                type="email"
+                placeholder="email@company.com"
+                class="email-input"
+                name="email"
+                onchange="onEmailInput(event)"
+                autocomplete="email"
+              />
+              <input
+                type="submit"
+                value="Subscribe to monthly newsletter"
+                class="subscribe-button"
+                onclick="onSubscribeClick(event)"
+              />
+            </form>
+          </main>
+        </section>
+      </section>
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <section
+        class="success-message-container"
+        id="success-message-container-id"
+      >
+        <section class="success-message-info-container">
+          <img src="./assets/images/icon-success.svg" />
+          <h1 class="success-message-header">Thanks for subscribing!</h1>
+          <p class="success-message-description">
+            A confirmation email has been sent to
+            <b id="subscribed-email-value-id"></b>
+            . Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </section>
+        <button class="dismiss-message-button" onclick="onDismissButtonClick()">
+          Dismiss Message
+        </button>
+      </section>
+
+      <!-- Success message end -->
+    </section>
+  </body>
+</html>

@@ -1,0 +1,264 @@
+:root {
+    --White:#FFFFFF;
+    --Blue-800:#242742;
+    --Blue-700:#36384D;
+    --Grey:#949494;
+    --Red:#FF6155;
+    --Red-100: #FFE7E6;
+    --Gradient: linear-gradient(to right,#FF6A3A,#FF527B);
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Text-Preset-1 {
+    font-family: "Roboto-Bold";
+    font-size: 56px;
+    line-height: 100%;
+}
+
+.Text-Preset-1-Mobile {
+    font-family: "Roboto-Bold";
+    font-size: 88px;
+    line-height: 100%;
+}
+
+.Text-Preset-2-Bold {
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.Text-Preset-2-Regular {
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.Text-Preset-3 {
+    font-family: "Roboto-Bold";
+    font-size: 12px;
+    line-height: 150%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--Blue-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+}
+
+.illustration-sign-up-image {
+    width: 100%;
+}
+
+.sign-up-info-container {
+    padding: 40px 24px 44px;
+}
+
+.sign-up-info-header, .success-message-header {
+    font-family: "Roboto-Bold";
+    font-size: 40px;
+    line-height: 100%;
+    color: var(--Blue-800);
+}
+
+.newsletter-info-description {
+    padding: 1.5rem 0;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--Blue-800);
+}
+
+.newsletter-info-list {
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+.newsletter-info-list > li > p {
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--Blue-800);
+    padding: 0 1rem 0.5rem;
+}
+
+.newsletter-info-list > li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.label-and-error-section {
+    font-family: "Roboto-Bold";
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.email-label {
+    color: var(--Blue-800);
+}
+
+.error-message {
+    color: var(--Red);
+}
+
+.email-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--Blue-800);
+    margin: 0.5rem 0 1.5rem;
+    border: 1px solid var(--Grey);
+}
+
+.email-input::placeholder {
+    color: var(--Grey);
+}
+
+.email-input:focus {
+    outline: none;
+    border: 1px solid var(--Blue-800);
+}
+
+.email-input.error-input, .email-input.error-input:focus {
+    outline: none;
+    border: 1px solid var(--Red) !important;
+    background-color: var(--Red-100);
+    color: var(--Red);
+}
+
+.subscribe-button, .dismiss-message-button {
+    background-color: var(--Blue-700);
+    border-radius: 8px;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--White);
+    width: 100%;
+    border: none;
+}
+
+.subscribe-button:hover, .subscribe-button:focus,
+.dismiss-message-button:hover, .dismiss-message-button:focus {
+    background-image: var(--Gradient);
+    cursor: pointer;
+}
+
+.success-message-container {
+    background-color: var(--White);
+    padding: 149px 1.5rem 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.success-message-header {
+    padding: 2rem 0;
+}
+
+.success-message-description {
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--Blue-800);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+    .sign-up-container {
+        padding: 42.86px 40px;
+        border-radius: 36px;
+    }
+    
+    .sign-up-info-container {
+        padding: 30px 0 0;
+    }
+    
+    .sign-up-info-header, .success-message-header {
+        font-size: 56px;
+    }
+    
+    .newsletter-info-list {
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .sign-up-container {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1.5rem 2rem;
+        border-radius: 36px;
+    }
+
+    .illustration-sign-up-image {
+        height: 100%;
+    }
+    
+    .sign-up-info-container {
+        padding: 71.5px 4rem 71.5px 0;
+        width: 440px;
+    }
+    
+    .sign-up-info-header, .success-message-header {
+        font-size: 56px;
+    }
+
+    .newsletter-info-description {
+        padding: 2rem 0;
+    }
+    
+    .newsletter-info-list {
+        padding-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .success-message-container {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        width: 31.5rem;
+        height: auto;
+        border-radius: 36px;
+    }
+    
+    .success-message-header {
+        padding: 2rem 0;
+    }
+    
+    .success-message-description {
+        padding-bottom: 2rem;
+    }
+}
