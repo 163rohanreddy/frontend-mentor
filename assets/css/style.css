@@ -1,0 +1,358 @@
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Purple-600: hsl(246, 80%, 60%);
+    --Orange-300-work: hsl(15, 100%, 70%);
+    --Blue-300-play: hsl(195, 74%, 62%);
+    --Pink-400-study: hsl(348, 100%, 68%);
+    --Green-400-exercise: hsl(145, 58%, 55%);
+    --Purple-700-social: hsl(264, 64%, 52%);
+    --Yellow-300-self-care: hsl(43, 84%, 65%);
+    --Navy-950: hsl(226, 43%, 10%);
+    --Navy-900: hsl(235, 46%, 20%);
+    --Purple-500: hsl(235, 45%, 61%);
+    --Navy-200: hsl(236, 100%, 87%);
+    --Grey-200: hsl(0, 0%, 85%);
+    --Navy-800: hsl(235, 41%, 34%);
+}
+
+@font-face {
+    font-family: "Rubik-Light";
+    src: url(../fonts/Rubik-Light.ttf);
+}
+
+@font-face {
+    font-family: "Rubik-Regular";
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Rubik-Medium";
+    src: url(../fonts/Rubik-Medium.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Navy-950);
+}
+
+.dashboard-container {
+    margin: 81px 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.profile-info {
+    border-radius: 15px;
+    background-color: var(--Navy-900);
+    color: var(--Purple-500);
+    font-family: "Rubik-Regular";
+    font-size: 18px;
+    line-height: 21px;
+
+    & .profile-header {
+        border-radius: 15px;
+        background-color: var(--Purple-600);
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 4rem auto;
+        gap: 0.5rem 1.5rem;
+
+
+        &>img {
+            width: 4rem;
+            border: 3px solid var(--White);
+            border-radius: 50%;
+            grid-column: 1 / span 1;
+            grid-row: 1 /span 2;
+        }
+
+        &>p {
+            font-family: "Rubik-Regular";
+            font-size: 15px;
+            line-height: 18px;
+            grid-column: 2 / span 1;
+            grid-row: 1 /span 1;
+            color: var(--Navy-200);
+        }
+
+        &>h1 {
+            font-family: "Rubik-Light";
+            font-size: 24px;
+            line-height: 28px;
+            grid-column: 2 / span 1;
+            grid-row: 2 /span 1;
+            color: var(--White);
+            font-weight: normal;
+        }
+    }
+
+    & .dashboard-navigation {
+        margin: 1.5rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &>a:hover,
+        &>a:focus {
+            cursor: pointer;
+            color: var(--White);
+        }
+    }
+}
+
+.activities-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.activity-container {
+    border-radius: 15px 15px 20px 20px;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    & .activity-section {
+        border-radius: 15px;
+        background-color: var(--Navy-900);
+        padding: 27.5px 1.5rem;
+
+        &:hover {
+            background-color: var(--Navy-800);
+        }
+
+        & .activity-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+
+            & .activity-title {
+                color: var(--White);
+                font-family: "Rubik-Medium";
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: normal;
+            }
+
+            & .options-button {
+                background-color: transparent;
+                border: none;
+            }
+
+            & .options-button:hover {
+                cursor: pointer;
+            }
+        }
+
+        & .activity-time {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & .activity-current-time {
+                font-family: "Rubik-Light";
+                font-size: 32px;
+                line-height: 38px;
+                color: var(--White);
+            }
+
+            & .activity-previous-time {
+                font-family: "Rubik-Regular";
+                font-size: 15px;
+                line-height: 18px;
+                color: var(--Navy-200);
+            }
+        }
+    }
+
+}
+
+.work {
+    background: var(--Orange-300-work) url(../images/icon-work.svg) no-repeat calc(100% - 12px) -12px;
+
+}
+
+.play {
+    background: var(--Blue-300-play) url(../images/icon-play.svg) no-repeat calc(100% - 12px) -12px;
+}
+
+.study {
+    background: var(--Pink-400-study) url(../images/icon-study.svg) no-repeat calc(100% - 12px) -12px;
+}
+
+.exercise {
+    background: var(--Green-400-exercise) url(../images/icon-exercise.svg) no-repeat calc(100% - 12px) -12px;
+}
+
+.social {
+    background: var(--Purple-700-social) url(../images/icon-social.svg) no-repeat calc(100% - 12px) -12px;
+}
+
+.self-care {
+    background: var(--Yellow-300-self-care) url(../images/icon-self-care.svg) no-repeat calc(100% - 12px) -12px;
+}
+
+@media only screen and (min-width: 768px) and (max-width:1439px) {
+    .dashboard-container {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .profile-info {
+        grid-column: span 1;
+
+        & .dashboard-navigation {
+            justify-content: center;
+            gap: 0.5rem;
+
+            &>a {
+                width: 109px;
+            }
+        }
+    }
+
+    .activities-section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+    }
+
+    .activity-container {
+        border-radius: 15px 15px 20px 20px;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        min-width: 188px;
+        height: 213px;
+
+        & .activity-section {
+            padding: 1.5rem;
+
+            & .activity-header {
+                margin-bottom: 1rem;
+            }
+
+            & .activity-time {
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                gap: 0.5rem;
+
+                & .activity-current-time {
+                    font-size: 56px;
+                    line-height: 66px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .dashboard-container {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+    .profile-info {
+        width: 255px;
+        border-radius: 15px;
+        background-color: var(--Navy-900);
+        color: var(--Purple-500);
+        font-family: "Rubik-Regular";
+        font-size: 18px;
+        line-height: 21px;
+    
+        & .profile-header {
+            height: calc(100% - 170px);
+            display: block;
+    
+            &>img {
+                width: 78px;
+                border: 3px solid var(--White);
+                border-radius: 50%;
+                margin-bottom: 40px;
+            }
+    
+            &>h1 {
+                font-size: 40px;
+                line-height: 47px;
+            }
+        }
+    
+        & .dashboard-navigation {
+            margin: 2rem;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            height: 106px;
+    
+            &>a:hover,
+            &>a:focus {
+                cursor: pointer;
+                color: var(--White);
+            }
+        }
+    }
+
+    .activities-section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+    }
+
+    .activity-container {
+        border-radius: 15px 15px 20px 20px;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        min-width: 255px;
+        height: 244px;
+
+        & .activity-section {
+            padding: 2rem;
+
+            & .activity-header {
+                margin-bottom: 1.5rem;
+            }
+
+            & .activity-time {
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                gap: 0.5rem;
+
+                & .activity-current-time {
+                    font-size: 56px;
+                    line-height: 66px;
+                }
+            }
+        }
+    }
+
+}
