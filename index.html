@@ -9,70 +9,61 @@
     <title>Time tracking dashboard</title>
   </head>
   <body>
-    <main class="dashboard-container" role="dashboard-container">
-      <aside class="profile-info" role="profile-info">
-        <header class="profile-header" role="profile-header">
+    <main class="dashboard-container" role="main">
+      <aside class="profile-info" role="complementary">
+        <header class="profile-header" role="banner">
           <img
             src="./assets/images/image-jeremy.png"
             alt="Profile Picture"
-            role="profile-picture"
+            role="img"
           />
           <p role="profile-subtitle">Report For</p>
-          <h1 role="profile-name">Jeremy Robson</h1>
+          <h1 role="profile-name" role="heading">Jeremy Robson</h1>
         </header>
-        <nav class="dashboard-navigation" role="dashboard-navigation">
+        <nav class="dashboard-navigation" role="navigation">
           <a
-            role="daily-button"
+            role="button"
             data-period="daily"
             onclick="onNavigationClick(this.dataset.period)"
             >Daily</a
           >
           <a
-            role="weekly-button"
+            role="button"
             data-period="weekly"
             onclick="onNavigationClick(this.dataset.period)"
             >Weekly</a
           >
           <a
-            role="monthly-button"
+            role="button"
             data-period="monthly"
             onclick="onNavigationClick(this.dataset.period)"
             >Monthly</a
           >
         </nav>
       </aside>
-      <section class="activities-section" role="activities-section">
-        <article class="activity-container work" role="work-activity">
-          <section class="activity-section" role="activity-section">
-            <header class="activity-header" role="activity-header">
-              <h2 class="activity-title" role="activity-title">Work</h2>
-              <button class="options-button" role="options-button">
+      <section class="activities-section" role="region">
+        <article class="activity-container work" role="article">
+          <section class="activity-section" role="region">
+            <header class="activity-header" role="banner">
+              <h2 class="activity-title" role="heading">Work</h2>
+              <button class="options-button" role="button">
                 <img
                   src="./assets/images/icon-ellipsis.svg"
                   alt="More Options"
-                  role="ellipsis-image-button"
                 />
               </button>
             </header>
-            <div class="activity-time" role="activity-time">
-              <p
-                class="activity-current-time"
-                data-activity="Work"
-                role="activity-current-time"
-              ></p>
-              <p
-                class="activity-previous-time"
-                data-activity="Work"
-                role="activity-previous-time"
-              ></p>
+            <div class="activity-time" role="region">
+              <p class="activity-current-time" data-activity="Work"></p>
+              <p class="activity-previous-time" data-activity="Work"></p>
             </div>
           </section>
         </article>
-        <article class="activity-container play" role="play-activity">
-          <section class="activity-section" role="activity-section">
-            <header class="activity-header" role="activity-header">
-              <h2 class="activity-title" role="activity-title">Play</h2>
-              <button class="options-button" role="options-button">
+        <article class="activity-container play" role="region">
+          <section class="activity-section" role="region">
+            <header class="activity-header" role="banner">
+              <h2 class="activity-title" role="heading">Play</h2>
+              <button class="options-button" role="button">
                 <img
                   src="./assets/images/icon-ellipsis.svg"
                   alt="More Options"
@@ -80,25 +71,21 @@
                 />
               </button>
             </header>
-            <div class="activity-time" role="activity-time">
+            <div class="activity-time" role="region">
               <p
                 class="activity-current-time"
                 data-activity="Play"
                 role="activity-current-time"
               ></p>
-              <p
-                class="activity-previous-time"
-                data-activity="Play"
-                role="activity-previous-time"
-              ></p>
+              <p class="activity-previous-time" data-activity="Play"></p>
             </div>
           </section>
         </article>
-        <article class="activity-container study" role="study-activity">
-          <section class="activity-section" role="activity-section">
-            <header class="activity-header" role="activity-header">
-              <h2 class="activity-title" role="activity-title">Study</h2>
-              <button class="options-button" role="options-button">
+        <article class="activity-container study" role="region">
+          <section class="activity-section" role="region">
+            <header class="activity-header" role="banner">
+              <h2 class="activity-title" role="heading">Study</h2>
+              <button class="options-button" role="button">
                 <img
                   src="./assets/images/icon-ellipsis.svg"
                   alt="More Options"
@@ -106,25 +93,21 @@
                 />
               </button>
             </header>
-            <div class="activity-time" role="activity-time">
+            <div class="activity-time" role="region">
               <p
                 class="activity-current-time"
                 data-activity="Study"
                 role="activity-current-time"
               ></p>
-              <p
-                class="activity-previous-time"
-                data-activity="Study"
-                role="activity-previous-time"
-              ></p>
+              <p class="activity-previous-time" data-activity="Study"></p>
             </div>
           </section>
         </article>
-        <article class="activity-container exercise" role="exercise-activity">
-          <section class="activity-section" role="activity-section">
-            <header class="activity-header" role="activity-header">
-              <h2 class="activity-title" role="activity-title">Exercise</h2>
-              <button class="options-button" role="options-button">
+        <article class="activity-container exercise" role="region">
+          <section class="activity-section" role="region">
+            <header class="activity-header" role="banner">
+              <h2 class="activity-title" role="heading">Exercise</h2>
+              <button class="options-button" role="button">
                 <img
                   src="./assets/images/icon-ellipsis.svg"
                   alt="More Options"
@@ -132,25 +115,21 @@
                 />
               </button>
             </header>
-            <div class="activity-time" role="activity-time">
+            <div class="activity-time" role="region">
               <p
                 class="activity-current-time"
                 data-activity="Exercise"
                 role="activity-current-time"
               ></p>
-              <p
-                class="activity-previous-time"
-                data-activity="Exercise"
-                role="activity-previous-time"
-              ></p>
+              <p class="activity-previous-time" data-activity="Exercise"></p>
             </div>
           </section>
         </article>
-        <article class="activity-container social" role="social-activity">
-          <section class="activity-section" role="activity-section">
-            <header class="activity-header" role="activity-header">
-              <h2 class="activity-title" role="activity-title">Social</h2>
-              <button class="options-button" role="options-button">
+        <article class="activity-container social" role="region">
+          <section class="activity-section" role="region">
+            <header class="activity-header" role="banner">
+              <h2 class="activity-title" role="heading">Social</h2>
+              <button class="options-button" role="button">
                 <img
                   src="./assets/images/icon-ellipsis.svg"
                   alt="More Options"
@@ -158,25 +137,21 @@
                 />
               </button>
             </header>
-            <div class="activity-time" role="activity-time">
+            <div class="activity-time" role="region">
               <p
                 class="activity-current-time"
                 data-activity="Social"
                 role="activity-current-time"
               ></p>
-              <p
-                class="activity-previous-time"
-                data-activity="Social"
-                role="activity-previous-time"
-              ></p>
+              <p class="activity-previous-time" data-activity="Social"></p>
             </div>
           </section>
         </article>
-        <article class="activity-container self-care" role="self-care-activity">
-          <section class="activity-section" role="activity-section">
-            <header class="activity-header" role="activity-header">
-              <h2 class="activity-title" role="activity-title">Self Care</h2>
-              <button class="options-button" role="options-button">
+        <article class="activity-container self-care" role="region">
+          <section class="activity-section" role="region">
+            <header class="activity-header" role="banner">
+              <h2 class="activity-title" role="heading">Self Care</h2>
+              <button class="options-button" role="button">
                 <img
                   src="./assets/images/icon-ellipsis.svg"
                   alt="More Options"
@@ -184,17 +159,13 @@
                 />
               </button>
             </header>
-            <div class="activity-time" role="activity-time">
+            <div class="activity-time" role="region">
               <p
                 class="activity-current-time"
                 data-activity="Self Care"
                 role="activity-current-time"
               ></p>
-              <p
-                class="activity-previous-time"
-                data-activity="Self Care"
-                role="activity-previous-time"
-              ></p>
+              <p class="activity-previous-time" data-activity="Self Care"></p>
             </div>
           </section>
         </article>
