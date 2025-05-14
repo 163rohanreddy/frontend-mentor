@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <script defer src="./script.js"></script>
+
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <header class="tip-calculator-header" role="banner">
+      <img
+        src="./assests/images/logo.svg"
+        alt="Logo"
+        class="tip-calculator-logo"
+      />
+    </header>
+    <main class="tip-calculator-main" role="main">
+      <section
+        class="tip-input-section"
+        role="form"
+        aria-label="Tip Calculator Input Section"
+      >
+        <label for="bill-input-id" class="tip-label-class">Bill</label>
+        <input
+          id="bill-input-id"
+          class="tip-input-class input-margin-class dollar-input-icon-class tip-input-section-margin-bottom"
+          placeholder="0"
+          aria-label="Bill amount"
+        />
+        <p class="tip-label-class">Select Tip %</p>
+        <div
+          class="tip-button-group-class tip-input-section-margin-bottom"
+          role="group"
+          aria-label="Tip percentage options"
+        >
+          <button
+            class="button-class tip-button-class"
+            data-tip-percentage="5"
+            role="button"
+          >
+            5%
+          </button>
+          <button
+            class="button-class tip-button-class"
+            data-tip-percentage="10"
+            role="button"
+          >
+            10%
+          </button>
+          <button
+            class="button-class tip-button-class"
+            data-tip-percentage="15"
+            role="button"
+          >
+            15%
+          </button>
+          <button
+            class="button-class tip-button-class"
+            data-tip-percentage="25"
+            role="button"
+          >
+            25%
+          </button>
+          <button
+            class="button-class tip-button-class"
+            data-tip-percentage="50"
+            role="button"
+          >
+            50%
+          </button>
+          <input
+            id="custom-tip-input-id"
+            placeholder="Custom"
+            class="tip-input-class custom-tip-input-class"
+            aria-label="Custom tip percentage"
+          />
+        </div>
+        <div class="label-container">
+          <label for="person-count-input-id" class="tip-label-class"
+            >Number of People</label
+          >
+          <p id="error-text-id" class="error-text" role="alert">
+            Can't be zero
+          </p>
+        </div>
+        <input
+          id="person-count-input-id"
+          placeholder="0"
+          class="tip-input-class input-margin-class person-input-icon-class"
+          aria-label="Number of people"
+        />
+      </section>
+      <section
+        class="tip-output-section"
+        role="region"
+        aria-label="Calculated Tip Output"
+      >
+        <div class="amount-display-class tip-amount-margin-bottom">
+          <p class="amount-display-label-class">
+            Tip Amount<span class="amount-display-sub-label-class"
+              >/ person</span
+            >
+          </p>
+          <p id="tip-amount-id" class="amount-class" role="contentinfo">
+            $1.21
+          </p>
+        </div>
+        <div class="amount-display-class total-amount-margin-bottom">
+          <p class="amount-display-label-class">
+            Total<span class="amount-display-sub-label-class">/ person</span>
+          </p>
+          <p id="total-amount-id" class="amount-class" role="contentinfo"></p>
+        </div>
+        <button
+          id="reset-button-id"
+          class="button-class reset-button-class"
+          role="button"
+        >
+          Reset
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
